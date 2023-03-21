@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box--line {
+        border: 3px solid #345;
+      }
+    </style>
+  </head>
+  <body>
+    <div><button id="addBtn">추가</button></div>
+    <div id="list">
+      <!--
+        <div class="box--line">
+        <p>삭제 연습입니다.</p>
+        <button>삭제</button>
+      </div>-->
+    </div>
+    <script>
+      let getEl = document.getElementById.bind(document);
+
+      let cnt = 0;
+      let addBtn = getEl("addBtn");
+      console.dir(addBtn);
+      addBtn.addEventListener("click", () => {
+        let divEl = document.createElement("div");
+        // divEl.class = "box--line"; (X)
+        // divEl.className = "box--line"; (O)
+        // divEl["class"] = "box--line;"; (X)
+        // divEl["className"] = "box--line"; (O)
+
+        divEl.setAttribute("class", "box--line");
+        divEl.innerHTML = "<p>삭제 연습니다.</p><button>삭제</button>";
+        divEl.innerHTML = `
+          <p>삭제 연습입니다.</p>
+          <button onclick="doDel(this)">삭제${++cnt}</button>
+      `;
+
+        document.getElementById("list").appendChild(divEl);
+
+        let delBtn = divEl.querySelector("button");
+        delBtn.addEventListener("click", doDel);
+      });
+
+      const doDel = (_this) => {
+        // remove
+        // removechild로 제거하기
+        // removeChild(_this.parentNode);
+
+        // removeChild는 부모노드에서만 사용가능
+        let delEl = _this.parentNode;
+        delEl.parentNode.removeChild(delEl);
+      };
+      // let doDel = function () {};
+      // let doDel = () => {};
+    </script>
+  </body>
+</html>

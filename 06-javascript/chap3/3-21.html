@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <script type="text/javascript">
+      // 함수 선언문
+      function sum1(num) {
+        let sum = 0;
+        for (let i = 1; i <= num; i++) {
+          sum += i;
+        }
+        console.log(sum); // 55
+      }
+      sum1(10);
+
+      // 함수 표현식
+      let sum2 = function (num) {
+        let sum = 0;
+        for (let i = 1; i <= num; i++) {
+          sum += i;
+        }
+        console.log(sum); // 55
+      };
+      sum2(10);
+
+      // Function 생성자 함수
+      let sum3 = new Function(
+        "num",
+        "let sum = 0;" + "for(let i=1;i<=num;i++) {" + "	sum += i;" + "} " + "console.log(sum);"
+      );
+      sum3(10);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn__area,
+      #list {
+        border: 1px solid #345;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="btn__area">
+      <!-- 인라인 방식 처리 -->
+      <button id="addBtn" onclick="addH2()">Click</button>
+      <button id="addBtn2">Click2</button>
+    </div>
+    <div id="list"></div>
+
+    <script>
+      let m = {
+        onclick: null,
+      };
+
+      let btn2 = document.getElementById("addBtn2");
+
+      btn2.onclick = function () {
+        let listEle = document.getElementById("list");
+        listEle.innerHTML += "<div><input /></div>";
+      };
+
+      /*
+            document.createElement
+            document.createTextNode
+            appendChild
+            innerHTML
+            innerText
+
+            이벤트 설정 방식
+            - 인라인(엘리먼트에 직접 설정)
+            - 프로퍼티 : on이벤트타입
+            - 메서드 :  addEventListener()
+        */
+      // 버튼이 눌릴때 h2 엘리먼트를 생성해서 아이디가 list인 div에 추가한다.
+      function addH2() {
+        // <div><input /></div>
+        let divEle = document.createElement("div");
+
+        let inputEle = document.createElement("input");
+        divEle.appendChild(inputEle);
+
+        let listEle = document.getElementById("list");
+        listEle.appendChild(divEle);
+
+        /*
+            <h2></h2>
+            let h2Ele = document.createElement("h2");
+            추가
+            let h2Text = document.createTextNode("추가");
+            h2Ele.appendChild(h2Text);
+
+            let listEle = document.getElementById("list")
+            document.querySelector("#list")
+
+            <div id="list"><h2>추가</h2></div>
+            listEle.appendChild(h2Ele);
+        */
+      }
+    </script>
+  </body>
+</html>

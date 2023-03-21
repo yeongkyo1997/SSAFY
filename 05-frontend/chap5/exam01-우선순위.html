@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+        !important > inline > id > class, attribute > element
+        */
+      #a {
+        color: #234231;
+      }
+      .b {
+        background-color: #cb1212;
+        color: #fff;
+      }
+      p.b {
+        background-color: #000;
+        color: #fff;
+      }
+      p[class] {
+        background-color: #de4ac6;
+      }
+    </style>
+  </head>
+  <body>
+    <div>연습</div>
+    <p id="a" class="b">우선순위 테스트</p>
+  </body>
+</html>

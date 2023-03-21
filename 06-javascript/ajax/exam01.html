@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: aquamarine;
+      }
+
+      ul li {
+        float: left;
+        margin: 1.2rem;
+        background-color: #333;
+        width: 200px;
+        padding: 1.2rem;
+        color: white;
+        font-weight: bold;
+        border-radius: 4px;
+        box-shadow: 0 0 5px 5px rgba(30, 103, 30, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">회원정보가져오기</button>
+    <div id="memberList">
+      <ul id="memberUl"></ul>
+    </div>
+    <script>
+      const btn = document.getElementById("btn");
+
+      btn.onclick = () => {
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = () => {
+          // console.log("readyState: " + xhr.readyState);
+          // console.log("status: " + xhr.status);
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            // console.log("xhr.status:", xhr.status, xhr.statusText);
+            // console.log(JSON.parse(xhr.responseText));
+            let members = JSON.parse(xhr.responseText);
+
+            let memberUl = document.getElementById("memberUl");
+            const url = [
+              "https://edu.ssafy.com/edu/main/index.do",
+              "https://www.netflix.com/kr/",
+            ];
+
+            for (let i = 0; i < members.length; i++) {
+              let member = members[i];
+              let li = document.createElement("li");
+              li.innerHTML = `
+              <span><a href="${url[i]}">${member.id}</a></span>
+              <span>
+                ${member.name}
+              </span>
+              `;
+
+              memberUl.appendChild(li);
+            }
+          }
+        };
+        xhr.open("GET", "member.txt");
+        xhr.send();
+      };
+    </script>
+  </body>
+</html>

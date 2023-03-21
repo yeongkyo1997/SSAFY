@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        /* 왼쪽에서 오른쪽으로 */
+        /* list - result */
+        flex-direction: row;
+      }
+
+      .list {
+        width: 200px;
+        height: 500px;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: gray;
+      }
+      #result {
+        width: 300px;
+        height: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+        padding: 10px;
+        background-color: white;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="list">
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" id="1" value="JAVA" />
+              JAVA</label
+            >
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" id="2" value="SQL" />
+              SQL</label
+            >
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" id="3" value="HTML" />
+              HTML</label
+            >
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" id="4" value="CSS" />
+              CSS</label
+            >
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" id="5" value="JAVASCRIPT" />
+              JAVASCRIPT</label
+            >
+          </li>
+        </ul>
+      </div>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      const result = document.querySelector("#result");
+      const checkbox = document.querySelectorAll("input[type=checkbox]");
+      checkbox.forEach((item) => {
+        item.addEventListener("change", (e) => {
+          if (e.target.checked) {
+            result.appendChild(
+              document.createElement("span")
+            ).innerHTML = `<span id="span${e.target.id}">
+                ${e.target.value}
+                <button id="btn${e.target.id}">x</button>
+              </span>`;
+          } else {
+            result.removeChild(document.querySelector(`#span${e.target.id}`));
+          }
+        });
+
+        // button에 x를 누르면 해당 checkbox가 해제되고, result에서도 삭제되게 하기
+        const btn = document.querySelectorAll("#result button");
+        btn.forEach((item) => {
+          item.addEventListener("click", (e) => {
+            const id = e.target.id.replace("btn", "");
+            const checkbox = document.querySelector(`#span${id}`);
+            checkbox.removeChild(document.querySelector(`#span${id}`));
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="btn_area">
+      <button id="btn1" onclick="doAction1()">Click1</button>
+      <button id="btn2">Click2</button>
+      <button id="btn3">Click3</button>
+    </div>
+    <div id="list"></div>
+
+    <script>
+      let btn3 = document.getElementById("btn3");
+      btn3.addEventListener("click", (e) => {
+        // alert("doAction - 3");
+        // console.dir(e);
+        console.dir(e.target);
+        console.dir(e.target.innerHTML);
+        // e.target.innerHTML = "클릭3";
+        if (e.target.innerText === "클릭3") e.target.innerText = "Click3";
+        if (e.target.innerText === "Click3") e.target.innerText = "클릭3";
+      });
+
+      let btn2 = document.getElementById("btn2");
+      btn2.onclick = function () {
+        alert("doAction - 2");
+      };
+
+      btn2.onclick = function () {
+        alert("doAction - 22222");
+      };
+
+      function doAction1() {
+        alert("doAction - 1");
+      }
+    </script>
+  </body>
+</html>

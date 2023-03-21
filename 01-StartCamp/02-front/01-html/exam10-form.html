@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        form
+            input
+                구분자를 사용해서 다양한 타입(type)을 지정할 수 있다. 
+                - text, password, radio, file, checkbox, 
+            select
+            textarea
+                텍스트를 여러줄 작성할 수 있음
+     -->
+    <form>
+      <div>
+        <label>input type="text"</label> <input type="text" name="msg" />
+      </div>
+
+      <div>
+        <label>input type="password"</label
+        ><input type="password" name="password" />
+      </div>
+
+      <div>
+        <label>input type="radio"</label><input type="radio" name="radio" />
+      </div>
+
+      <div>
+        <label>input type="checkbox"</label>
+        <label><input id="java" type="checkbox" name="java" />자바</label>
+        <label><input id="sql" type="checkbox" name="sql" />SQL</label>
+        <label><input id="html" type="checkbox" name="html" />HTML</label>
+      </div>
+
+      <div>
+        <label for="">input type="file"</label>
+        <label for=""><input type="file" id="" /></label>
+      </div>
+      <div>
+        <label>input type="button"</label>
+        <input type="button" value="등록" onclick="alert('click되었음')" />
+        <button type="button">등록</button>
+      </div>
+
+      <div>
+        <label>input type="reset"</label>
+        <input type="reset" value="초기화" onclick="alert('click되었음')" />
+        <button type="reset">초기화</button>
+      </div>
+
+      <div>
+        <label>input type="submit"</label>
+        <input type="submit" value="가입" onclick="alert('click되었음')" />
+        <button type="submit">가입</button>
+      </div>
+
+      <div>
+        <label>input type="hidden"</label>
+        <input type="hidden" name="mode" value="reg" />
+      </div>
+
+      <div>
+        <label>
+          <select>
+            <option>선택</option>
+            <option>자바</option>
+            <option>파이썬</option>
+          </select>
+        </label>
+      </div>
+
+      <div><label>textarea</label><textarea cols="60" rows="6"></textarea></div>
+    </form>
+  </body>
+</html>

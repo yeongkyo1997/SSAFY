@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .error {
+        background: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="idForm" action="/servlet/hello">
+      <input id="id2" name="id" />
+      <button type="submit">확인2</button>
+      <span id="errMsg"></span>
+    </form>
+
+    <form action="/servlet/hello" onsubmit="return checkInput()">
+      <input id="id" name="id" />
+      <button type="submit">확인</button>
+      <span id="errMsg"></span>
+    </form>
+  </body>
+
+  <script>
+    let idEl = document.getElementById("id");
+    idForm.onsubmit = (e) => {
+      e.preventDefault();
+      let idEl = document.getElementById("id2");
+
+      if (idEl.value.trim().length !== 0) {
+        idForm.submit();
+      }
+
+      alert("form의 입력값 체크");
+    };
+
+    let idForm = document.getElementById("idForm");
+
+    idEl.addEventListener("keyup", () => {
+      if (idEl.value.trim().length > 0)
+        document.getElementById("errMsg").innerHTML = "";
+    });
+
+    const checkInput = () => {
+      if (idEl.value.trim().length == 0) {
+        let errMsg = document.getElementById("errMsg");
+        errMsg.innerHTML = "아이디를 입력하세요.";
+        errMsg.setAttribute("class", "error");
+        return false;
+      }
+
+      return true;
+    };
+  </script>
+</html>
