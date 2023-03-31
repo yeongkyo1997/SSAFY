@@ -18,55 +18,46 @@ import com.ssafy.sample.model.service.ProductServiceImpl;
 public class ProductController extends HttpServlet {
 
 	private ProductService productService;
-
+	
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		productService = ProductServiceImpl.getInstance();
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		String action = request.getParameter("action");
-		if (action == null)
-			action = "list";
-
-		switch (action) {
-		case "regist":
-			response.sendRedirect(request.getContextPath() + regist(request, response));
-			break;
-		case "update":
-			request.getRequestDispatcher("/product/regist.jsp").forward(request, response);
-			break;
-		default:
-			break;
-		}
+		doGet(request, response);
 	}
-
+	
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("action");
-		if (action == null)
-			action = "list";
-
+		if (action == null) action = "list";
+		
 		switch (action) {
 		case "regist":
-			response.sendRedirect(request.getContextPath() + regist(request, response));
+			response.sendRedirect(
+					request.getContextPath() + regist(request, response)
+			);
 			break;
 		case "registForm":
-			request.getRequestDispatcher("/product/regist.jsp").forward(request, response);
+			request.getRequestDispatcher("/product/regist.jsp")
+			       .forward(request, response);
 			break;
 		case "list":
-			request.getRequestDispatcher(list(request, response)).forward(request, response);
+			request.getRequestDispatcher(list(request, response))
+				   .forward(request, response);
 			break;
 		case "detail":
-			request.getRequestDispatcher(detail(request, response)).forward(request, response);
+			request.getRequestDispatcher(detail(request, response))
+			.forward(request, response);
 			break;
 		case "delete":
-			response.sendRedirect(request.getContextPath() + delete(request, response));
-			break;
+			response.sendRedirect(
+					request.getContextPath() + delete(request, response)
+			);
+			break;			
 		default:
 			break;
 		}
@@ -74,7 +65,10 @@ public class ProductController extends HttpServlet {
 
 	private String detail(HttpServletRequest request, HttpServletResponse response) {
 		try {
-			request.setAttribute("product", productService.detail(request.getParameter("code")));
+			request.setAttribute(
+					"product", 
+					productService.detail(request.getParameter("code"))
+			);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return "/error/error.jsp";
@@ -105,7 +99,7 @@ public class ProductController extends HttpServlet {
 		}
 		return "/product?action=list";
 	}
-
+	
 	private String delete(HttpServletRequest request, HttpServletResponse response) {
 		try {
 			productService.delete(request.getParameter("code"));
@@ -116,3 +110,10 @@ public class ProductController extends HttpServlet {
 		return "/product?action=list";
 	}
 }
+
+
+
+
+
+
+
