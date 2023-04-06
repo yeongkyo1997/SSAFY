@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var age;
+      console.log(age);
+      // 자바스트립트의 데이터의 타입은 값이다.
+      // 호이스팅 : 위쪽으로 끌어올린다.
+      // 2단계 과정이 발생
+      // 1단계 : 변수 또는 함수의 선언을 위쪽으로 끌어올린다.
+      //   console.log(v);
+      var v = 100;
+      v = "100";
+      console.log(v);
+
+      //   console.log(num);
+      let num = 100;
+
+      function fn() {
+        console.log(i);
+        for (var i = 0; i < 10; i++) {
+          console.log(i);
+        }
+        console.log(i);
+      }
+
+      function fn2() {
+        console.log(i);
+        for (let i = 0; i < 10; i++) {
+          console.log(i);
+        }
+        console.log(i);
+      }
+      fn();
+      // fn2();
+
+      const PI = Math.PI;
+    </script>
+  </body>
+</html>
