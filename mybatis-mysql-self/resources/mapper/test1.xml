@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.mybatis.model.dao.TestMapper1">
+    <select id="selectMember" resultType="member">
+        select *
+        from member
+        order by name
+    </select>
+
+    <insert id="insertMember" parameterType="member">
+        insert into member(id, name, area, tel)
+        values (#{id}, #{name}, #{area}, #{tel})
+    </insert>
+
+    <update id="updateMember" parameterType="member">
+        update memeber
+        set tel = #{tel}
+        where id = #{id}
+    </update>
+
+    <!--
+        java.lang.String - string : alias(별칭)
+    -->
+    <delete id="deleteMember" parameterType="string">
+        delete
+        from member
+        where id = #{id}
+    </delete>
+</mapper>
