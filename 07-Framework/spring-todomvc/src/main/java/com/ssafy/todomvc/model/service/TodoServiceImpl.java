@@ -10,29 +10,29 @@ import com.ssafy.todomvc.model.dao.TodoDao;
 
 @Service
 public class TodoServiceImpl implements TodoService {
-	private final TodoDao todoDao;
+    private final TodoDao todoDao;
 
-	public TodoServiceImpl(TodoDao todoDao) {
-		this.todoDao = todoDao;
-	}
+    public TodoServiceImpl(TodoDao todoDao) {
+        this.todoDao = todoDao;
+    }
 
-	@Override
-	public void clearTodo() throws SQLException {
-		todoDao.deleteAllTodo();
-	}
+    @Override
+    public void clearTodo(String userId) throws SQLException {
+        todoDao.deleteAllTodo(userId);
+    }
 
-	@Override
-	public void deleteTodo(int no) throws SQLException {
-		todoDao.deleteTodo(no);
-	}
+    @Override
+    public void deleteTodo(int no) throws SQLException {
+        todoDao.deleteTodo(no);
+    }
 
-	@Override
-	public void registTodo(Todo todo) throws SQLException {
-		todoDao.insertTodo(todo);
-	}
+    @Override
+    public void registTodo(Todo todo) throws SQLException {
+        todoDao.insertTodo(todo);
+    }
 
-	@Override
-	public List<Todo> listTodo() throws SQLException {
-		return todoDao.selectTodo();
-	}
+    @Override
+    public List<Todo> listTodo(String userId) throws SQLException {
+        return todoDao.selectTodoByUserId(userId);
+    }
 }
