@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* h2 {
+        border: 1px solid#345;
+      } */
+
+      /*
+            class 속성의 값이 m5인 엘리먼트 선택
+       */
+      .m5 {
+        border: 1px solid #345;
+      }
+
+      /*
+            id 속성의 값이 lang인 엘리먼트 선택
+       */
+      #lang {
+        width: 400px;
+        border-bottom: 10px solid #875;
+      }
+      ul.m5 > li {
+        margin: 2rem;
+        border: 1px solid tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="lang" class="m5">CSS 연습</h2>
+    <ul class="m5">
+      <li>자바</li>
+      <li>HTML</li>
+      <li>CSS</li>
+    </ul>
+  </body>
+</html>
