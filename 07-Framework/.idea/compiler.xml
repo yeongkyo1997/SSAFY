@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="exam" />
+        <module name="hello_di" />
+        <module name="spring_di" />
+        <module name="todomvc" />
+        <module name="sixboard" />
+        <module name="basic" />
+        <module name="board (1)" />
+        <module name="sample" />
+        <module name="hw" />
+        <module name="spring_aop" />
+        <module name="board (2)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="board" target="1.8" />
+      <module name="first" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="basic" options="-Xlint:all" />
+      <module name="board" options="-Xlint:all" />
+      <module name="board (1)" options="-Xlint:all" />
+      <module name="board (2)" options="-Xlint:all" />
+      <module name="exam" options="-Xlint:all" />
+      <module name="first" options="-Xlint:all" />
+      <module name="hw" options="-Xlint:all" />
+      <module name="sample" options="-Xlint:all" />
+      <module name="sixboard" options="-Xlint:all" />
+      <module name="todomvc" options="-Xlint:all" />
+    </option>
+  </component>
+</project>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/board1_springmvc/pom.xml" />
+        <option value="$PROJECT_DIR$/first-spring/pom.xml" />
+        <option value="$PROJECT_DIR$/exam/pom.xml" />
+        <option value="$PROJECT_DIR$/hello_di/pom.xml" />
+        <option value="$PROJECT_DIR$/hello_springmvc/pom.xml" />
+        <option value="$PROJECT_DIR$/six-board/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-todomvc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_di_배포/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_hw_03_2/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/sample/pom.xml" />
+        <option value="$PROJECT_DIR$/board2_file_interceptor/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/first-spring/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
