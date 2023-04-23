@@ -14,13 +14,13 @@
 				<th>제목</th>
 				<th>글쓴이</th>
 			</tr>
-			<c:forEach var="board" items="${list}">
+			<c:forEach var="product" items="${list}">
 				<tr>
-					<td>${board.no}</td>
-					<td><a href="detail?no=${board.no}">${board.title}</a></td>
-					<td>${board.title}</td>
-					<td>${board.name}</td>
-					<td><input type="checkbox" name="no" value="${board.no}" /></td>
+					<td>${product.no}</td>
+					<td><a href="detail?no=${product.no}">${product.title}</a></td>
+					<td>${product.title}</td>
+					<td>${product.name}</td>
+					<td><input type="checkbox" name="no" value="${product.no}" /></td>
 				</tr>
 			</c:forEach>
 		</table>

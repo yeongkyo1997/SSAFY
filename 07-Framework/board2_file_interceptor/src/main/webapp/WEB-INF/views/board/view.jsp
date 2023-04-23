@@ -58,7 +58,7 @@
                     <button type="button" id="btn-delete" class="btn btn-outline-danger mb-3 ms-1">
                         글삭제
                     </button>
-                    <form id="form-no-param" method="get" action="${root}/board">
+                    <form id="form-no-param" method="get" action="${root}/product">
                         <input type="hidden" id="npgno" name="pgno" value="${pgno}">
                         <input type="hidden" id="nkey" name="key" value="${key}">
                         <input type="hidden" id="nword" name="word" value="${word}">

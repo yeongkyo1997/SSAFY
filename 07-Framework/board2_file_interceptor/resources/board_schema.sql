@@ -38,11 +38,11 @@ values 	('ssafy', '김싸피', '1234', 'ssafy', 'ssafy.com', now()),
 commit;
 
 -- -----------------------------------------------------
--- Table `ssafyweb`.`board`
+-- Table `ssafyweb`.`product`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `ssafyweb`.`board` ;
+DROP TABLE IF EXISTS `ssafyweb`.`product` ;
 
-CREATE TABLE IF NOT EXISTS `ssafyweb`.`board` (
+CREATE TABLE IF NOT EXISTS `ssafyweb`.`product` (
   `article_no` INT NOT NULL AUTO_INCREMENT,
   `user_id` VARCHAR(16) NULL DEFAULT NULL,
   `subject` VARCHAR(100) NULL DEFAULT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `ssafyweb`.`memo` (
   INDEX `memo_to_member_fk_idx` (`user_id` ASC) VISIBLE,
   CONSTRAINT `memo_to_board_article_no_fk`
     FOREIGN KEY (`article_no`)
-    REFERENCES `ssafyweb`.`board` (`article_no`),
+    REFERENCES `ssafyweb`.`product` (`article_no`),
   CONSTRAINT `memo_to_member_user_id_fk`
     FOREIGN KEY (`user_id`)
     REFERENCES `ssafyweb`.`members` (`user_id`)
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `ssafyweb`.`file_info` (
   PRIMARY KEY (`idx`),
   CONSTRAINT `file_info_to_board_article_no_fk`
     FOREIGN KEY (`article_no`)
-    REFERENCES `ssafyweb`.`board` (`article_no`)
+    REFERENCES `ssafyweb`.`product` (`article_no`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
