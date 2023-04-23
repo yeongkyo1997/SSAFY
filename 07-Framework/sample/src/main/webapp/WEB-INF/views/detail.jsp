@@ -10,19 +10,19 @@
 	<table>
 		<tr>
 			<th>번호</th>
-			<td>${board.no}</td>
+			<td>${product.no}</td>
 		</tr>
 		<tr>
 			<th>제목</th>
-			<td>${board.title}</td>
+			<td>${product.title}</td>
 		</tr>
 		<tr>
 			<th>글쓴이</th>
-			<td>${board.name}</td>
+			<td>${product.name}</td>
 		</tr>
 		</tr>
 		<tr>
-			<td colspan="2"><a href="delete?no=${board.no}">삭제</a></td>
+			<td colspan="2"><a href="delete?no=${product.no}">삭제</a></td>
 		</tr>
 	</table>
 </body>

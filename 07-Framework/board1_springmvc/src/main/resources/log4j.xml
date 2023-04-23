@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.ssafy.board">
+	<logger name="com.ssafy.product">
 		<level value="info" />
 	</logger>
 	

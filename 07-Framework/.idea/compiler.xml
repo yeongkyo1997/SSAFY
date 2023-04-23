@@ -11,6 +11,7 @@
         <module name="hello_di" />
         <module name="spring_di" />
         <module name="todomvc" />
+        <module name="springtest" />
         <module name="sixboard" />
         <module name="basic" />
         <module name="board (1)" />
@@ -23,6 +24,9 @@
     <bytecodeTargetLevel>
       <module name="board" target="1.8" />
       <module name="first" target="1.8" />
+      <module name="practice" target="17" />
+      <module name="sample (1)" target="1.8" />
+      <module name="sample (2)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -34,8 +38,12 @@
       <module name="exam" options="-Xlint:all" />
       <module name="first" options="-Xlint:all" />
       <module name="hw" options="-Xlint:all" />
+      <module name="practice" options="-parameters" />
       <module name="sample" options="-Xlint:all" />
+      <module name="sample (1)" options="-Xlint:all" />
+      <module name="sample (2)" options="-Xlint:all" />
       <module name="sixboard" options="-Xlint:all" />
+      <module name="springtest" options="-Xlint:all" />
       <module name="todomvc" options="-Xlint:all" />
     </option>
   </component>

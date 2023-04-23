@@ -11,7 +11,7 @@
 		<table>
 			<tr>
 				<th>번호</th>
-				<td>${board.no}</td>
+				<td>${product.no}</td>
 			</tr>
 			<tr>
 				<th>제목</th>

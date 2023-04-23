@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../intellij/Servers.iml" filepath="$PROJECT_DIR$/../../intellij/Servers.iml" />
+      <module fileurl="file://$USER_HOME$/intellij/Servers.iml" filepath="$USER_HOME$/intellij/Servers.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-aop/spring_aop.iml" filepath="$PROJECT_DIR$/spring-aop/spring_aop.iml" />
     </modules>
   </component>
