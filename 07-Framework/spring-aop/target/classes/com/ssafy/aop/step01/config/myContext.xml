@@ -15,16 +15,16 @@
 
     <bean id="dbUtil" class="com.ssafy.util.DBUtil"/>
 
-    <bean id="boardDao" class="com.ssafy.board.model.dao.BoardDaoImpl">
+    <bean id="productDao" class="com.ssafy.product.model.dao.BoardDaoImpl">
         <constructor-arg ref="dataSource"/>
         <constructor-arg ref="dbUtil"/>
     </bean>
 
-    <bean id="boardService" class="com.ssafy.board.model.service.BoardServiceImpl">
-        <constructor-arg ref="boardDao"/>
+    <bean id="boardService" class="com.ssafy.product.model.service.BoardServiceImpl">
+        <constructor-arg ref="productDao"/>
     </bean>
 
-    <bean id="boardController" class="com.ssafy.board.controller.BoardController">
+    <bean id="boardController" class="com.ssafy.product.controller.BoardController">
         <constructor-arg ref="boardService"/>
     </bean>
 
@@ -32,7 +32,7 @@
 
     <aop:config>
         <aop:aspect id="traceAspect" ref="ptAdvice">
-            <aop:pointcut id="publicMethod" expression="execution(public * com.ssafy.board..*Dao.*(..))"/>
+            <aop:pointcut id="publicMethod" expression="execution(public * com.ssafy.product..*Dao.*(..))"/>
             <aop:around method="trace" pointcut-ref="publicMethod"/>
         </aop:aspect>
     </aop:config>

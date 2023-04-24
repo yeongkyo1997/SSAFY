@@ -16,18 +16,18 @@
 
     <bean id="dbUtil" class="com.ssafy.util.DBUtil"/>
 
-    <bean id="boardDao" class="com.ssafy.board.model.dao.BoardDaoImpl">
+    <bean id="productDao" class="com.ssafy.product.model.dao.BoardDaoImpl">
         <constructor-arg ref="dataSource"/>
         <constructor-arg ref="dbUtil"/>
     </bean>
 
     <bean id="boardService"
-          class="com.ssafy.board.model.service.BoardServiceImpl">
-        <constructor-arg ref="boardDao"/>
+          class="com.ssafy.product.model.service.BoardServiceImpl">
+        <constructor-arg ref="productDao"/>
     </bean>
 
     <bean id="boardController"
-          class="com.ssafy.board.controller.BoardController">
+          class="com.ssafy.product.controller.BoardController">
         <constructor-arg ref="boardService"/>
     </bean>
 
@@ -35,12 +35,12 @@
     <bean id="boardContentEncodeAdvice"
           class="com.ssafy.aop.step02.before.BoardContentEncodeAdvice"></bean>
 
-    <!-- com.ssafy.board package안에 있는 Dao로 끝나는 모든 클래스의 모든 메소드에 적용 -->
+    <!-- com.ssafy.product package안에 있는 Dao로 끝나는 모든 클래스의 모든 메소드에 적용 -->
     <aop:config>
         <aop:aspect id="beforeAspect"
                     ref="boardContentEncodeAdvice">
             <aop:pointcut id="publicMethod"
-                          expression="execution(public * com.ssafy.board..*Dao.*(..))"/>
+                          expression="execution(public * com.ssafy.product..*Dao.*(..))"/>
             <aop:before method="encode" pointcut-ref="publicMethod"/>
         </aop:aspect>
     </aop:config>

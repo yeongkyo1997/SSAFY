@@ -7,26 +7,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="exam" />
-        <module name="hello_di" />
         <module name="spring_di" />
         <module name="todomvc" />
         <module name="springtest" />
-        <module name="sixboard" />
-        <module name="basic" />
-        <module name="board (1)" />
-        <module name="sample" />
         <module name="hw" />
+        <module name="exam" />
+        <module name="product (2)" />
+        <module name="product (1)" />
+        <module name="hello_di" />
+        <module name="mybatis_test" />
+        <module name="sixboard" />
+        <module name="mvc" />
+        <module name="basic" />
+        <module name="mybatis-exam" />
         <module name="spring_aop" />
-        <module name="board (2)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="board" target="1.8" />
+      <module name="board (1)" target="1.8" />
+      <module name="board (2)" target="1.8" />
       <module name="first" target="1.8" />
       <module name="practice" target="17" />
+      <module name="sample" target="1.8" />
       <module name="sample (1)" target="1.8" />
       <module name="sample (2)" target="1.8" />
+      <module name="springtest (1)" target="1.8" />
+      <module name="springtest (2)" target="1.8" />
+      <module name="ws" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -38,13 +46,19 @@
       <module name="exam" options="-Xlint:all" />
       <module name="first" options="-Xlint:all" />
       <module name="hw" options="-Xlint:all" />
+      <module name="mvc" options="-Xlint:all" />
       <module name="practice" options="-parameters" />
+      <module name="product (1)" options="-Xlint:all" />
+      <module name="product (2)" options="-Xlint:all" />
       <module name="sample" options="-Xlint:all" />
       <module name="sample (1)" options="-Xlint:all" />
       <module name="sample (2)" options="-Xlint:all" />
       <module name="sixboard" options="-Xlint:all" />
       <module name="springtest" options="-Xlint:all" />
+      <module name="springtest (1)" options="-Xlint:all" />
+      <module name="springtest (2)" options="-Xlint:all" />
       <module name="todomvc" options="-Xlint:all" />
+      <module name="ws" options="-Xlint:all" />
     </option>
   </component>
 </project>

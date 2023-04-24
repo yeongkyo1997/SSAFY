@@ -1,6 +1,6 @@
 package com.ssafy.sample.model.service;
 
-import com.ssafy.sample.model.Board;
+import com.ssafy.sample.model.AttendanceDto;
 import com.ssafy.sample.model.dao.BoardDao;
 import org.springframework.stereotype.Service;
 
@@ -16,29 +16,29 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public List<Board> list() throws SQLException {
+	public List<AttendanceDto> list() throws SQLException {
 		return boardDao.selectBoard();
 	}
 
 	@Override
-	public Board detail(int no) throws Exception {
+	public AttendanceDto detail(String no) throws Exception {
 		return boardDao.selectBoardByPK(no);
 	}
 
 	@Override
-	public void delete(int no) throws SQLException {
+	public void delete(String no) throws SQLException {
 		boardDao.deleteBoard(no);
 	}
 
 	@Override
-	public void write(Board board) throws SQLException {
+	public void write(AttendanceDto board) throws SQLException {
 		boardDao.insertBoard(board);
 	}
 
 	@Override
-	public void multiDelete(List<Integer> noList) throws SQLException {
-		for (Integer no : noList) {
-			boardDao.deleteBoard(no);
+	public void multiDelete(List<String> noList) throws SQLException {
+		for (String ano : noList) {
+			boardDao.deleteBoard(ano);
 		}
 	}
 }

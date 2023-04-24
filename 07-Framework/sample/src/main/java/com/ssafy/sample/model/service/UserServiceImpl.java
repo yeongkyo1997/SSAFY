@@ -1,6 +1,6 @@
 package com.ssafy.sample.model.service;
 
-import com.ssafy.sample.model.User;
+import com.ssafy.sample.model.UserInfoDto;
 import com.ssafy.sample.model.dao.UserDao;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User login(User user) throws SQLException {
+    public UserInfoDto login(UserInfoDto user) throws SQLException {
         return userDao.selectLogin(user);
+    }
+
+    @Override
+    public UserInfoDto selectUser(String id) throws Exception {
+        return userDao.selectUser(id);
     }
 }

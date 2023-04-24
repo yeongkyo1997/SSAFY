@@ -1,6 +1,6 @@
 package com.ssafy.sample.model.dao;
 
-import com.ssafy.sample.model.User;
+import com.ssafy.sample.model.UserInfoDto;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
@@ -15,27 +15,40 @@ public class UserDaoImpl implements UserDao {
 
 
     public UserDaoImpl(DataSource dataSource) {
-		this.dataSource = dataSource;
-	}
+        this.dataSource = dataSource;
+    }
 
 
-	@Override
-    public User selectLogin(User user) throws SQLException {
-        try (
-                Connection connection = dataSource.getConnection();
-                PreparedStatement pstmt = connection.prepareStatement(
-                        "select id, name, password from user where id = ? and password = ?"
-                );
-        ) {
-            pstmt.setString(1, user.getId());
-            pstmt.setString(2, user.getPassword());
+    @Override
+    public UserInfoDto selectLogin(UserInfoDto user) throws SQLException {
+        try (Connection connection = dataSource.getConnection(); PreparedStatement pstmt = connection.prepareStatement("select userid, userpw from userinfo where userid = ? and userpw = ?");) {
+            pstmt.setString(1, user.getUserid());
+            pstmt.setString(2, user.getUserpw());
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next()) {
-                User userInfo = new User();
-                userInfo.setId(rs.getString("id"));
-                userInfo.setPassword(rs.getString("password"));
+                UserInfoDto userInfo = new UserInfoDto();
+                userInfo.setUserid(rs.getString("userid"));
+                userInfo.setUserpw(rs.getString("userpw"));
+                return userInfo;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public UserInfoDto selectUser(String id) throws SQLException {
+        try (Connection connection = dataSource.getConnection(); PreparedStatement pstmt = connection.prepareStatement("select userid, userpw, name, rclass, rname from userinfo where userid = ?");) {
+            pstmt.setString(1, id);
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                UserInfoDto userInfo = new UserInfoDto();
+                userInfo.setUserid(rs.getString("userid"));
+                userInfo.setUserpw(rs.getString("userpw"));
                 userInfo.setName(rs.getString("name"));
+                userInfo.setRclass(Integer.parseInt(rs.getString("rclass")));
+                userInfo.setRname(rs.getString("rname"));
                 return userInfo;
             }
         }

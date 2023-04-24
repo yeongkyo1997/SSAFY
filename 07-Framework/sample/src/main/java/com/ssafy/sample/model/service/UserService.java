@@ -1,7 +1,9 @@
 package com.ssafy.sample.model.service;
 
-import com.ssafy.sample.model.User;
+import com.ssafy.sample.model.UserInfoDto;
 
 public interface UserService {
-    User login(User user) throws Exception;
+    UserInfoDto login(UserInfoDto user) throws Exception;
+
+    UserInfoDto selectUser(String id) throws Exception;
 }

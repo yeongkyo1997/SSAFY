@@ -1,17 +1,16 @@
 package com.ssafy.sample.model.dao;
 
-import com.ssafy.sample.model.Board;
-import org.springframework.stereotype.Repository;
+import com.ssafy.sample.model.AttendanceDto;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public interface BoardDao {
-	List<Board> selectBoard() throws SQLException;
+	List<AttendanceDto> selectBoard() throws SQLException;
 
-	Board selectBoardByPK(int no) throws Exception;
+	AttendanceDto selectBoardByPK(String no) throws Exception;
 
-	void deleteBoard(int no) throws SQLException;
+	void deleteBoard(String no) throws SQLException;
 
-	void insertBoard(Board board) throws SQLException;
+	void insertBoard(AttendanceDto board) throws SQLException;
 }

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$USER_HOME$/intellij/Servers.iml" filepath="$USER_HOME$/intellij/Servers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-mysql-self/mybatis-exam.iml" filepath="$PROJECT_DIR$/mybatis-mysql-self/mybatis-exam.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-aop/spring_aop.iml" filepath="$PROJECT_DIR$/spring-aop/spring_aop.iml" />
     </modules>
   </component>

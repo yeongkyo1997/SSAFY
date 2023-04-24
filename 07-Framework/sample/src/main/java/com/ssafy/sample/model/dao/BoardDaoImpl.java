@@ -1,6 +1,9 @@
 package com.ssafy.sample.model.dao;
 
-import com.ssafy.sample.model.Board;
+import com.ssafy.sample.model.AttendanceDto;
+import com.ssafy.sample.model.UserInfoDto;
+import com.ssafy.sample.model.service.UserService;
+import com.ssafy.sample.model.service.UserServiceImpl;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
@@ -13,76 +16,69 @@ import java.util.List;
 
 @Repository
 public class BoardDaoImpl implements BoardDao {
-	private final DataSource dataSource;
+    private final DataSource dataSource;
 
-	public BoardDaoImpl(DataSource dataSource) {
-		this.dataSource = dataSource;
-	}
+    public BoardDaoImpl(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 
-	@Override
-	public List<Board> selectBoard() throws SQLException {
-		List<Board> list = new ArrayList<>();
+    @Override
+    public List<AttendanceDto> selectBoard() throws SQLException {
+        List<AttendanceDto> list = new ArrayList<>();
 
-		try (Connection connection = dataSource.getConnection();
-				PreparedStatement pstmt = connection.prepareStatement(
-						"select b.no, b.title, b.writer, u.name from board b join user u on b.writer = u.id order by no desc")) {
-			ResultSet rs = pstmt.executeQuery();
+        try (Connection connection = dataSource.getConnection(); PreparedStatement pstmt = connection.prepareStatement("select ano , userid, issue, issuedate from attendance ")) {
+            ResultSet rs = pstmt.executeQuery();
 
-			while (rs.next()) {
-				Board board = new Board();
-				board.setNo(rs.getInt("no"));
-				board.setTitle(rs.getString("title"));
-				board.setWriter(rs.getString("writer"));
-				board.setName(rs.getString("name"));
-				list.add(board);
-			}
-		}
-		return list;
-	}
+            while (rs.next()) {
+                AttendanceDto attendanceDto = new AttendanceDto();
+                attendanceDto.setAno(rs.getString("ano"));
+                attendanceDto.setIssuedate(rs.getString("issuedate"));
+                attendanceDto.setIssue(rs.getString("issue"));
+                attendanceDto.setUserid(rs.getString("userid"));
+                list.add(attendanceDto);
+            }
+        }
+        return list;
+    }
 
-	@Override
-	public Board selectBoardByPK(int no) throws Exception {
-		try (Connection connection = dataSource.getConnection();
-				PreparedStatement pstmt = connection
-						.prepareStatement("select b.no, b.title, b.content, b.writer, u.name " + "from board b "
-								+ "join user u " + "on b.writer = u.id" + " where no = ? ");) {
+    @Override
+    public AttendanceDto selectBoardByPK(String ano) throws Exception {
+        try (Connection connection = dataSource.getConnection(); PreparedStatement pstmt = connection.prepareStatement("select b.ano, b.userid, b.issuedate, b.issue " + "from attendance b " + " where ano = ? ");) {
 
-			pstmt.setInt(1, no);
-			ResultSet rs = pstmt.executeQuery();
+            pstmt.setString(1, ano);
+            ResultSet rs = pstmt.executeQuery();
 
-			if (rs.next()) {
-				Board board = new Board();
-				board.setNo(rs.getInt("no"));
-				board.setTitle(rs.getString("title"));
-				board.setContent(rs.getString("content"));
-				board.setWriter(rs.getString("writer"));
-				board.setName(rs.getString("name"));
-				return board;
-			}
-		}
-		return null;
-	}
+            if (rs.next()) {
+                AttendanceDto attendanceDto = new AttendanceDto();
 
-	@Override
-	public void deleteBoard(int no) throws SQLException {
-		try (Connection connection = dataSource.getConnection();
-				PreparedStatement pstmt = connection.prepareStatement("delete from board where no = ?");) {
+                attendanceDto.setAno(rs.getString("ano"));
+                attendanceDto.setUserid(rs.getString("userid"));
+                attendanceDto.setIssue(rs.getString("issue"));
+                attendanceDto.setIssuedate(rs.getString("issuedate"));
+                return attendanceDto;
+            }
+        }
+        return null;
+    }
 
-			pstmt.setInt(1, no);
-			pstmt.executeUpdate();
-		}
-	}
+    @Override
+    public void deleteBoard(String ano) throws SQLException {
+        try (Connection connection = dataSource.getConnection(); PreparedStatement pstmt = connection.prepareStatement("delete from attendance where ano = ?");) {
 
-	@Override
-	public void insertBoard(Board board) throws SQLException {
-		try (Connection connection = dataSource.getConnection();
-				PreparedStatement pstmt = connection
-						.prepareStatement("insert into board(title, writer, content) values(?, ?, ?) ");) {
-			int cnt = 1;
-			pstmt.setString(cnt++, board.getTitle());
-			pstmt.setString(cnt++, board.getWriter());
-			pstmt.setString(cnt++, board.getContent());
-			pstmt.executeUpdate();
-		}
-	}
+            pstmt.setString(1, ano);
+            pstmt.executeUpdate();
+        }
+    }
+
+    @Override
+    public void insertBoard(AttendanceDto attendanceDto) throws SQLException {
+        try (Connection connection = dataSource.getConnection(); PreparedStatement pstmt = connection.prepareStatement("insert into attendance(ano, userid, issuedate, issue) values(?, ?, ?, ?) ");) {
+            int cnt = 1;
+            pstmt.setString(cnt++, attendanceDto.getAno());
+            pstmt.setString(cnt++, attendanceDto.getUserid());
+            pstmt.setString(cnt++, attendanceDto.getIssuedate());
+            pstmt.setString(cnt++, attendanceDto.getIssue());
+            pstmt.executeUpdate();
+        }
+    }
 }

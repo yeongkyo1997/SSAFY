@@ -17,11 +17,19 @@
         <option value="$PROJECT_DIR$/sample/pom.xml" />
         <option value="$PROJECT_DIR$/board2_file_interceptor/pom.xml" />
         <option value="$PROJECT_DIR$/practice/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_ws_03_5/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_ws_03_2/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis_test/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-mysql-self/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-Test/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/first-spring/pom.xml" />
+        <option value="$PROJECT_DIR$/practice/pom.xml" />
+        <option value="$PROJECT_DIR$/sample/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_ws_03_5/pom.xml" />
       </set>
     </option>
   </component>
