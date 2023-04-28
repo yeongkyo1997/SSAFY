@@ -8,16 +8,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_di" />
+        <module name="board6_springboot (1) (com.example)" />
         <module name="todomvc" />
         <module name="springtest" />
-        <module name="hw" />
+        <module name="board (1)" />
+        <module name="board6_springboot (1)" />
+        <module name="board (3)" />
+        <module name="board (2)" />
+        <module name="board6_springboot (2)" />
         <module name="exam" />
         <module name="product (2)" />
         <module name="product (1)" />
         <module name="hello_di" />
         <module name="mybatis_test" />
+        <module name="product (3)" />
         <module name="sixboard" />
-        <module name="mvc" />
         <module name="basic" />
         <module name="mybatis-exam" />
         <module name="spring_aop" />
@@ -25,9 +30,14 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="board" target="1.8" />
-      <module name="board (1)" target="1.8" />
-      <module name="board (2)" target="1.8" />
+      <module name="board06_springBoot" target="1.8" />
+      <module name="board6_springboot" target="1.8" />
+      <module name="board6_springboot (1) (com.example)" target="1.8" />
+      <module name="board6_springboot (2) (com.ssafy)" target="1.8" />
       <module name="first" target="1.8" />
+      <module name="HelloSpringBoot" target="1.8" />
+      <module name="hw" target="1.8" />
+      <module name="mvc" target="1.8" />
       <module name="practice" target="17" />
       <module name="sample" target="1.8" />
       <module name="sample (1)" target="1.8" />
@@ -39,10 +49,18 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="HelloSpringBoot" options="-parameters" />
       <module name="basic" options="-Xlint:all" />
-      <module name="board" options="-Xlint:all" />
+      <module name="board" options="" />
       <module name="board (1)" options="-Xlint:all" />
       <module name="board (2)" options="-Xlint:all" />
+      <module name="board (3)" options="-Xlint:all" />
+      <module name="board06_springBoot" options="-parameters" />
+      <module name="board6_springboot" options="-parameters" />
+      <module name="board6_springboot (1)" options="-parameters" />
+      <module name="board6_springboot (1) (com.example)" options="-parameters" />
+      <module name="board6_springboot (2)" options="-parameters" />
+      <module name="board6_springboot (2) (com.ssafy)" options="-parameters" />
       <module name="exam" options="-Xlint:all" />
       <module name="first" options="-Xlint:all" />
       <module name="hw" options="-Xlint:all" />
@@ -50,6 +68,7 @@
       <module name="practice" options="-parameters" />
       <module name="product (1)" options="-Xlint:all" />
       <module name="product (2)" options="-Xlint:all" />
+      <module name="product (3)" options="-Xlint:all" />
       <module name="sample" options="-Xlint:all" />
       <module name="sample (1)" options="-Xlint:all" />
       <module name="sample (2)" options="-Xlint:all" />

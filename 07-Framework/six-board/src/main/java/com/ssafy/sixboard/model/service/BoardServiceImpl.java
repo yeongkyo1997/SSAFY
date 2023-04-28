@@ -3,11 +3,11 @@ package com.ssafy.sixboard.model.service;
 import java.util.List;
 import java.util.Map;
 
+import com.ssafy.sixboard.model.dao.BoardDao;
+import com.ssafy.sixboard.util.SizeConstant;
 import org.springframework.stereotype.Service;
 
 import com.ssafy.sixboard.model.BoardDto;
-import com.ssafy.sixboard.model.dao.BoardDao;
-import com.ssafy.sixboard.util.SizeConstant;
 
 @Service
 public class BoardServiceImpl implements BoardService {

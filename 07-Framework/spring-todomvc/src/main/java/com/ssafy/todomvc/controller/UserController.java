@@ -1,7 +1,7 @@
 package com.ssafy.todomvc.controller;
 
-import com.ssafy.todomvc.model.User;
 import com.ssafy.todomvc.model.service.UserService;
+import com.ssafy.todomvc.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

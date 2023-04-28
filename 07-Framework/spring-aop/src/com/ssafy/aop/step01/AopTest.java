@@ -1,7 +1,7 @@
 package com.ssafy.aop.step01;
 
-import com.ssafy.board.controller.BoardController;
-import com.ssafy.board.model.BoardDto;
+import com.ssafy.controller.BoardController;
+import com.ssafy.model.BoardDto;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

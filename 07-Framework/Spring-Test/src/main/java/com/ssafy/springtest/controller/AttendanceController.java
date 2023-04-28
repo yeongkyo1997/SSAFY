@@ -1,8 +1,8 @@
 package com.ssafy.springtest.controller;
 
+import com.ssafy.springtest.model.service.AttendanceService;
 import com.ssafy.springtest.model.Attendance;
 import com.ssafy.springtest.model.User;
-import com.ssafy.springtest.model.service.AttendanceService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

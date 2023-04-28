@@ -8,7 +8,7 @@ public class HelloMain {
 	public static void main(String[] args) {
 //		TODO :com/ssafy/hello/di4/xml/applicationContext.xml를 사용하여 ApplicationContext 생성
 		ApplicationContext context = new ClassPathXmlApplicationContext(
-				"com/ssafy/hello/di4/xml/applicationContext.xml");
+                "com/ssafy/hello/di4/xml/applicationContext.xml");
 
 //		HelloMessage helloMessage = (HelloMessage) context.getBean("helloMessage");
 //		HelloMessage helloMessage = context.getBean(HelloMessageKor.class);

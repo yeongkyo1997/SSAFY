@@ -1,6 +1,6 @@
 package com.ssafy.aop.step02.before;
 
-import com.ssafy.board.model.BoardDto;
+import com.ssafy.model.BoardDto;
 import org.aspectj.lang.JoinPoint;
 
 public class BoardContentEncodeAdvice {

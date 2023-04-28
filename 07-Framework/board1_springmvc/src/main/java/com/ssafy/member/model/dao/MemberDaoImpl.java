@@ -1,7 +1,7 @@
 package com.ssafy.member.model.dao;
 
-import com.ssafy.member.model.MemberDto;
 import com.ssafy.util.DBUtil;
+import com.ssafy.member.model.MemberDto;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;

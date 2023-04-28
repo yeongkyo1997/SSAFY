@@ -3,12 +3,11 @@ package com.ssafy.sixboard.controller;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.context.annotation.ComponentScan;
+import com.ssafy.sixboard.model.service.BoardService;
+import com.ssafy.sixboard.util.SizeConstant;
 import org.springframework.stereotype.Controller;
 
 import com.ssafy.sixboard.model.BoardDto;
-import com.ssafy.sixboard.model.service.BoardService;
-import com.ssafy.sixboard.util.SizeConstant;
 
 @Controller
 public class BoardController {

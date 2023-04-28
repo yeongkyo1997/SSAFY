@@ -1,7 +1,7 @@
 package com.ssafy.member.model.service;
 
-import com.ssafy.member.model.MemberDto;
 import com.ssafy.member.model.dao.MemberDao;
+import com.ssafy.member.model.MemberDto;
 import org.springframework.stereotype.Service;
 
 @Service

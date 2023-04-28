@@ -1,6 +1,6 @@
 package com.ssafy.todomvc.controller;
 
-import com.ssafy.todomvc.model.User;
+import com.ssafy.todomvc.model.service.TodoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ssafy.todomvc.model.Todo;
-import com.ssafy.todomvc.model.service.TodoService;
-
-import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/todo")

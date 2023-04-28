@@ -1,7 +1,7 @@
 package com.ssafy.member.controller;
 
-import com.ssafy.member.model.MemberDto;
 import com.ssafy.member.model.service.MemberService;
+import com.ssafy.member.model.MemberDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

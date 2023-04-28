@@ -22,6 +22,15 @@
         <option value="$PROJECT_DIR$/mybatis_test/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis-mysql-self/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-Test/pom.xml" />
+        <option value="$PROJECT_DIR$/board3_mybatis_완성본/pom.xml" />
+        <option value="$PROJECT_DIR$/board4_mybatis_spring_완성본/pom.xml" />
+        <option value="$PROJECT_DIR$/board4_mybatis_spring/pom.xml" />
+        <option value="$PROJECT_DIR$/board3_mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis_practice/pom.xml" />
+        <option value="$PROJECT_DIR$/board5_restapi/pom.xml" />
+        <option value="$PROJECT_DIR$/board06_springBoot/pom.xml" />
+        <option value="$PROJECT_DIR$/board6_springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/HelloSpringBoot/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

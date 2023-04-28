@@ -14,7 +14,7 @@
         <property name="password" value="ssafy"/>
     </bean>
 
-    <bean id="dbUtil" class="com.ssafy.util.DBUtil"/>
+    <bean id="dbUtil" class="util.com.ssafy.board.DBUtil"/>
 
     <bean id="productDao" class="com.ssafy.product.model.dao.BoardDaoImpl">
         <constructor-arg ref="dataSource"/>

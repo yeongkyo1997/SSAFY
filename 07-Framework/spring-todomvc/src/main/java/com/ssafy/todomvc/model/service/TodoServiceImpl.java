@@ -3,9 +3,9 @@ package com.ssafy.todomvc.model.service;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.ssafy.todomvc.model.Todo;
 import org.springframework.stereotype.Service;
 
-import com.ssafy.todomvc.model.Todo;
 import com.ssafy.todomvc.model.dao.TodoDao;
 
 @Service

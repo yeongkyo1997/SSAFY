@@ -7,10 +7,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.ssafy.sixboard.controller.BoardController;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.ssafy.sixboard.controller.BoardController;
 import com.ssafy.sixboard.model.BoardDto;
 
 public class BoardMain {

@@ -1,6 +1,6 @@
 package com.ssafy.aop.step03.after.returning;
 
-import com.ssafy.board.model.BoardDto;
+import com.ssafy.model.BoardDto;
 import org.aspectj.lang.JoinPoint;
 
 import java.util.List;
