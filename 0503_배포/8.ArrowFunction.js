@@ -24,9 +24,9 @@
 // () => ({ id: "ssafy" });
 
 // // body가 여러줄일 경우 {}, return 생략 불가.
-// (x) => {
-//   const y = x + 100;
-//   return y;
-// };
+(x) => {
+  const y = x + 100;
+  return y;
+};
 
 // Arrow Function에서는 this가 바인딩 되지 않음.
