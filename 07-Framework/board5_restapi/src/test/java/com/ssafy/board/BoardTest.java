@@ -16,32 +16,32 @@ import com.ssafy.board.model.service.BoardService;
 
 public class BoardTest extends UnitTestConfig {
 
-	private final Logger logger = LoggerFactory.getLogger(BoardTest.class);
-	
-	@Autowired
-	private BoardService boardService;
-	
-	@Test
-	public void listTest() throws Exception {
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("pgno", "1");
-		map.put("key", "");
-		map.put("word", "");
-		List<BoardDto> list = boardService.listArticle(map);
-		assertEquals(10, list.size());
-		logger.debug("list : {}", list);
-		logger.debug("list size : {}", list.size());
-	}
-	
-	@Test
-//	@Ignore
-	public void modifyTest() throws Exception {
-		BoardDto boardDto = new BoardDto();
-		boardDto.setArticleNo(1);
-		boardDto.setSubject("제목 수정해요!!!!");
-		boardDto.setContent("내용도 수정해요!!!");
-		boardService.modifyArticle(boardDto);		
-	}
+    private final Logger logger = LoggerFactory.getLogger(BoardTest.class);
 
-	
+    @Autowired
+    private BoardService boardService;
+
+    @Test
+    public void listTest () throws Exception {
+        Map<String, String> map = new HashMap<>();
+        map.put("pgno", "1");
+        map.put("key", "");
+        map.put("word", "");
+        List<BoardDto> list = boardService.listArticle(map);
+        assertEquals(10, list.size());
+        logger.debug("list : {}", list);
+        logger.debug("list size : {}", list.size());
+    }
+
+    @Test
+//	@Ignore
+    public void modifyTest () throws Exception {
+        BoardDto boardDto = new BoardDto();
+        boardDto.setArticleNo(1);
+        boardDto.setSubject("제목 수정해요!!!!");
+        boardDto.setContent("내용도 수정해요!!!");
+        boardService.modifyArticle(boardDto);
+    }
+
+
 }

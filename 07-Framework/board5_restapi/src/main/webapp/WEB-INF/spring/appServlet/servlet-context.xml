@@ -27,7 +27,7 @@
 	
 	<context:component-scan base-package="com.ssafy.*.controller" />
 	
-	<beans:bean id="confirm" class="interceptor.com.ssafy.board.ConfirmInterceptor"/>
+	<beans:bean id="confirm" class="com.ssafy.interceptor.ConfirmInterceptor"/>
 
 	<interceptors>
 		<interceptor>
@@ -39,7 +39,7 @@
 			<mapping path="/article/delete"/>
 			<!-- <exclude-mapping path="/user/log*"/> -->
 			
-			<!-- <beans:bean class="interceptor.com.ssafy.board.ConfirmInterceptor"/> -->
+			<!-- <beans:bean class="com.ssafy.interceptor.ConfirmInterceptor"/> -->
 			<beans:ref bean="confirm"/>
 		</interceptor>
 	</interceptors>
@@ -52,7 +52,7 @@
 	</beans:bean>
 
 	<!-- fileDownload -->
-	<beans:bean id="fileDownLoadView" class="view.board.com.ssafy.board.FileDownLoadView"/>
+	<beans:bean id="fileDownLoadView" class="com.ssafy.board.view.FileDownLoadView"/>
 	<beans:bean id="fileViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
 		<beans:property name="order" value="0" />
 	</beans:bean> 

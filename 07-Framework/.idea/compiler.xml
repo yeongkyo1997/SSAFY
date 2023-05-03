@@ -10,19 +10,17 @@
         <module name="spring_di" />
         <module name="board6_springboot (1) (com.example)" />
         <module name="todomvc" />
-        <module name="springtest" />
+        <module name="board6_springboot" />
         <module name="board (1)" />
         <module name="board6_springboot (1)" />
         <module name="board (3)" />
         <module name="board (2)" />
         <module name="board6_springboot (2)" />
-        <module name="exam" />
         <module name="product (2)" />
         <module name="product (1)" />
         <module name="hello_di" />
         <module name="mybatis_test" />
         <module name="product (3)" />
-        <module name="sixboard" />
         <module name="basic" />
         <module name="mybatis-exam" />
         <module name="spring_aop" />
@@ -31,9 +29,9 @@
     <bytecodeTargetLevel>
       <module name="board" target="1.8" />
       <module name="board06_springBoot" target="1.8" />
-      <module name="board6_springboot" target="1.8" />
       <module name="board6_springboot (1) (com.example)" target="1.8" />
       <module name="board6_springboot (2) (com.ssafy)" target="1.8" />
+      <module name="exam" target="1.8" />
       <module name="first" target="1.8" />
       <module name="HelloSpringBoot" target="1.8" />
       <module name="hw" target="1.8" />
@@ -42,6 +40,8 @@
       <module name="sample" target="1.8" />
       <module name="sample (1)" target="1.8" />
       <module name="sample (2)" target="1.8" />
+      <module name="sixboard" target="1.8" />
+      <module name="springtest" target="1.8" />
       <module name="springtest (1)" target="1.8" />
       <module name="springtest (2)" target="1.8" />
       <module name="ws" target="1.8" />
