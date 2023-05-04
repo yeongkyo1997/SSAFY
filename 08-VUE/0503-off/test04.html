@@ -8,13 +8,18 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    <div id="app"></div>
+    <h1 id="app">
+      <div :id="idVal">연습...</div>
+      <img :src="imgSrc" />
+    </h1>
 
     <script>
       new Vue({
         el: "#app",
         data() {
-          return {};
+          return {
+            idVal: "divObj",
+          };
         },
       });
     </script>
