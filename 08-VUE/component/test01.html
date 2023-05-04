@@ -10,18 +10,16 @@
 
 <body>
   <div id="app1">
-    <my-global></my-global>
-    <my-global></my-global>
+    <class6-comp></class6-comp>
   </div>
+
   <div id="app2">
-    <my-global></my-global>
-    <my-global></my-global>
+    <class6-comp></class6-comp>
   </div>
   <script>
     // 전역컴포넌트
-    Vue.component('my-global', {
-      //컴포넌트 옵션
-      template: '<h2>전역 컴포넌트임</h2>',
+    Vue.component('class6-comp', {
+      template: '<h2>성공</h2>',
     });
 
     new Vue({
