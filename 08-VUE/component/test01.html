@@ -14,7 +14,7 @@
   </div>
 
   <div id="app2">
-    <class6-comp></class6-comp>
+    <local-comp></local-comp>
   </div>
   <script>
     // 전역컴포넌트
@@ -28,6 +28,11 @@
 
     new Vue({
       el: '#app2',
+      components: {
+        'local-comp': {
+          template: '<h2>지역 컴포넌트</h2>',
+        }
+      }
     });
   </script>
 </body>
