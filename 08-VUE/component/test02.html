@@ -9,22 +9,25 @@
 </head>
 
 <body>
-  <div id="app">
-    <button @click="toggle">클릭</button>
-    <div v-show="isShow">{{msg}}</div>
+  <div id="app1">
+    <my-local></my-local>
+    <my-local></my-local>
+  </div>
+  <div id="app2">
+    <my-local></my-local>
+    <my-local></my-local>
   </div>
   <script>
     new Vue({
-      el: "#app",
-      data: {
-        msg: "보이나요?",
-        isShow: true
+      el: '#app1',
+      components: {
+        'myLocal': {
+          template: '<h2>지역 컴포넌트</h2>',
+        },
       },
-      methods: {
-        toggle() {
-          this.isShow = !this.isShow;
-        }
-      }
+    });
+    new Vue({
+      el: '#app2',
     });
   </script>
 </body>

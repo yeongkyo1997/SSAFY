@@ -14,6 +14,7 @@
             <h3>v-if VS v-show</h3>
             <div v-if="condition">v-if div</div>
             <div v-show="condition">v-show div</div>
+            <button @click="toggle">toggle</button>
         </div>
     </div>
     <script>
@@ -21,6 +22,11 @@
             el: "#app",
             data: {
                 condition: false
+            }
+            , methods: {
+                toggle() {
+                    this.condition = !this.condition;
+                }
             }
         });
     </script>

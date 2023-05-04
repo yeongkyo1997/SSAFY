@@ -10,7 +10,9 @@
 
 <body>
   <div id="app">
-    <div>메세지 : {{message}}</div>
+    <div>{{message}}</div>
+    <div v-text="`메시지 : ${message}`"></div>
+    <div v-html="`메시지 : ${message}`"></div>
   </div>
   <script>
     new Vue({

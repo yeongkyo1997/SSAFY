@@ -5,13 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vue.js</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
 </head>
 
 <body>
   <div id="app">
     <span>클릭 카운트 : {{count}}</span>
-    <button>클릭</button>
+    <button @click="++count">클릭</button>
   </div>
 
   <script type="text/javascript">
