@@ -14,6 +14,9 @@
     <child-component propsdata="안녕하세요"></child-component>
     <!-- 동적 props -->
     <child-component v-bind:propsdata="message"></child-component>
+    <ssafy-area v-bind:name="area" num="4"></ssafy-area>
+    <ssafy-area name="부울경" num="2"></ssafy-area>
+    <ssafy-area name="서울" num="12"></ssafy-area>
   </div>
   <script>
     //하위 컴포넌트
@@ -21,11 +24,21 @@
       props: ['propsdata'],
       template: '<span>{{ propsdata }}</span>',
     });
+    Vue.component('ssafy-area', {
+      props: ['name', 'num'],
+      template: `
+      <div>
+        <h2>지역명: {{ name }} </h2>
+        <h2>반 수: {{ num }}개 </h2>
+      </div>
+      `,
+    })
     new Vue({
       el: '#app',
       data() {
         return {
           message: 'hello ssafy',
+          area: '대전지역입니다'
         };
       },
     });

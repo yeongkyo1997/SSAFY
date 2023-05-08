@@ -23,15 +23,19 @@
   </template>
   <script>
     Vue.component('child-comp', {
-      props: ['area', 'msg'],
       template: '#ChildComp',
-    });
+      props: ['area', 'msg']
+    })
+
     new Vue({
       el: '#app',
-      data: {
-        msg: ['굿^^', '최고!!', '실화냐?', '좋아요*', '짱!!'],
-      },
-    });
+      data() {
+        return {
+          msg: ['굿^^', '최고!!', '실화냐?', '좋아요*', '짱!!'],
+        }
+      }
+    })
+
   </script>
 </body>
 
