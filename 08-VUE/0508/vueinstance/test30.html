@@ -18,6 +18,13 @@
 </head>
 
 <body>
+  <div id="app2">
+    <input type="text" id="msg" ref="abc">
+    <script>
+      let msgEl = document.getElementById("msg");
+      msgEl.focus();
+    </script>
+  </div>
   <div id="app">
     <h2>엘리먼트 참조하기</h2>
     <!-- 아이디 : <input type="text" v-model="id"> -->
@@ -37,7 +44,7 @@
           fontSize: '25px',
         },
       },
-      methods: {
+      methods: { // id 중복검사
         idCheck() {
           if (this.id.length < 5 || this.id.length > 12) {
             this.msg = `아이디는 5자이상 12자리 이하입니다.`;
