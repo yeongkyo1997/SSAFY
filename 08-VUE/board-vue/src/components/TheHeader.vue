@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <img src="" alt="" />
+    <img src="@/assets/ssafy_logo.png" alt="" />
     <div><a href="">로그인</a> | <a href="">게시판</a></div>
   </div>
 </template>

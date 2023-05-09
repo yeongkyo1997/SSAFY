@@ -1,13 +1,34 @@
 <template>
   <div>
     <h2>Vue를 이용한 게시판</h2>
+    <board-list @regist="regist"></board-list>
+    <board-write></board-write>
+    <board-modify :input="article"></board-modify>
   </div>
 </template>
 
 <script>
+import BoardList from "@/components/board/BoardList.vue";
+import BoardWrite from "@/components/board/BoardWrite.vue";
+import BoardModify from "@/components/board/BoardModify.vue";
 
 export default {
   name: "AppBoard",
+  data() {
+    return {
+      article: {},
+    };
+  },
+  components: {
+    BoardList,
+    BoardWrite,
+    BoardModify,
+  },
+  methods: {
+    regist(data) {
+      this.article = data;
+    },
+  },
 };
 </script>
 
