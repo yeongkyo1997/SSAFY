@@ -12,18 +12,18 @@
     <ul>
       <li>
         <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
+          href="https://github.com/yeongkyo1997?tab=repositories"
           target="_blank"
           rel="noopener"
-          >babel</a
+          >git</a
         >
       </li>
       <li>
         <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
+          href="https://solved.ac/profile/yeongkyo1997"
           target="_blank"
           rel="noopener"
-          >eslint</a
+          >solved.ac</a
         >
       </li>
     </ul>
@@ -96,9 +96,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scope>
 h3 {
   margin: 40px 0 0;
+  color: pink;
 }
 ul {
   list-style-type: none;
