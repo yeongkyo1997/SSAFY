@@ -5,7 +5,9 @@
 <script>
 export default {
   name: "MainContent3",
- 
+  props: {
+    planInfo: String,
+  },
 };
 </script>
 

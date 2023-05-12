@@ -10,6 +10,7 @@
         <module name="spring_di" />
         <module name="board6_springboot (1) (com.example)" />
         <module name="todomvc" />
+        <module name="vue" />
         <module name="board6_springboot" />
         <module name="board (1)" />
         <module name="board6_springboot (1)" />
@@ -77,6 +78,7 @@
       <module name="springtest (1)" options="-Xlint:all" />
       <module name="springtest (2)" options="-Xlint:all" />
       <module name="todomvc" options="-Xlint:all" />
+      <module name="vue" options="-parameters" />
       <module name="ws" options="-Xlint:all" />
     </option>
   </component>

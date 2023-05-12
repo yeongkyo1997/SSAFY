@@ -5,7 +5,9 @@
 <script>
 export default {
   name: "MainContent2",
-  
+  props: {
+    attractionInfo: String,
+  },
 };
 </script>
 

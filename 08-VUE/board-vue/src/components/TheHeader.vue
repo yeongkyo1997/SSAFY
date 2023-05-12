@@ -1,7 +1,12 @@
 <template>
   <div class="header">
-    <img src="@/assets/ssafy_logo.png" alt="" />
-    <div><a href="">로그인</a> | <a href="">게시판</a></div>
+    <router-link to="/">
+      <img src="@/assets/ssafy_logo.png" alt="" />
+    </router-link>
+    <div>
+      <router-link to="/user/login">로그인</router-link> |
+      <router-link to="/board">게시판</router-link>
+    </div>
   </div>
 </template>
 

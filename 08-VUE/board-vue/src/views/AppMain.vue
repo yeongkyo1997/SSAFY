@@ -1,11 +1,23 @@
 <template>
   <div class="main">
+    <main-content1 class="main-content" :map-info="mapInfo"></main-content1>
+    <main-content2 class="main-content" :attraction-info="attractionInfo"></main-content2>
+    <main-content3 class="main-content" :plan-info="planInfo"></main-content3>
   </div>
 </template>
 
 <script>
+import MainContent1 from "@/components/main/MainContent1";
+import MainContent2 from "@/components/main/MainContent2";
+import MainContent3 from "@/components/main/MainContent3";
+
 export default {
   name: "AppMain",
+  components: {
+    MainContent1,
+    MainContent2,
+    MainContent3,
+  },
   data() {
     return {
       mapInfo: "지도를 출력할 예정입니다.",

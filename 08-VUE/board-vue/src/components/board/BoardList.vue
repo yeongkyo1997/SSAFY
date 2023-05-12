@@ -24,9 +24,8 @@
         </thead>
         <tbody>
           <board-list-item
-            @select="select"
             v-for="article in articles"
-            :key="article.articleNo"
+            :key="article.articleno"
             :article="article"
           ></board-list-item>
         </tbody>
@@ -37,7 +36,10 @@
 </template>
 
 <script>
-import BoardListItem from "./BoardListItem.vue";
+import BoardListItem from "@/components/board/BoardListItem";
+import http from "@/util/http-common";
+// import axios from "axios";
+
 export default {
   name: "BoardList",
   components: {
@@ -46,44 +48,43 @@ export default {
   data() {
     return {
       articles: [],
-      article: {},
     };
   },
   created() {
     // 비동기
     // TODO : 글목록 얻기.
-    fetch("http://localhost/board/list")
-      .then((response) => response.json())
-      .then((data) => (this.articles = data));
+
+    http.get("/board").then((response) => {
+      this.articles = response.data;
+    });
+
     // this.articles = [
     //   {
-    //     articleNo: 10,
-    //     userName: "안효인",
+    //     articleno: 10,
+    //     userid: "안효인",
     //     subject: "안녕하세요",
     //     hit: 10,
-    //     registerTime: "2023-05-08 17:03:15",
+    //     regtime: "2022-11-08 17:03:15",
     //   },
     //   {
-    //     articleNo: 9,
-    //     userName: "김싸피",
+    //     articleno: 9,
+    //     userid: "김싸피",
     //     subject: "안녕하세요2",
     //     hit: 102,
-    //     registerTime: "2023-05-08 14:13:15",
+    //     regtime: "2022-11-08 14:13:15",
     //   },
     //   {
-    //     articleNo: 8,
-    //     userName: "박싸피",
+    //     articleno: 8,
+    //     userid: "박싸피",
     //     subject: "안녕하세요7",
     //     hit: 24,
-    //     registerTime: "2023-05-07 11:03:15",
+    //     regtime: "2022-11-07 11:03:15",
     //   },
     // ];
   },
   methods: {
-    movePage() {},
-    select(data) {
-      this.article = data;
-      this.$emit("regist", this.article);
+    movePage() {
+      this.$router.push({ name: "boardwrite" });
     },
   },
 };

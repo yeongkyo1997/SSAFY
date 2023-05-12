@@ -1,19 +1,26 @@
 <template>
   <div id="app">
     <the-header></the-header>
-    <app-board></app-board>
+    <!-- <app-main></app-main> -->
+    <!-- <app-board></app-board> -->
+    <router-view></router-view>
   </div>
 </template>
+
 <script>
-import TheHeader from "@/components/TheHeader.vue";
-import AppBoard from "@/views/AppBoard.vue";
+import TheHeader from "@/components/TheHeader";
+// import AppMain from "@/views/AppMain";
+// import AppBoard from "@/views/AppBoard";
+
 export default {
   components: {
     TheHeader,
-    AppBoard,
+    // AppMain,
+    // AppBoard,
   },
 };
 </script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -23,16 +30,7 @@ export default {
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+a {
+  text-decoration: none;
 }
 </style>
